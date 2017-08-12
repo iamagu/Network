@@ -4,3 +4,5 @@
 四次握手，当客户端接收最后一个ACK时为什么要等待2MSL才进入关闭状态？（注：MSL, Maximum Segment Lifetime）
 因为TCP假定网络是不可靠的，必须等待服务端接收到ACK。
 还有一个需要知道的：当服务端收到ACK之后并没有响应客户端，客户端是怎么知道服务端已经收到ACK了？这是因为如果Server没有接收到ACK会不断的发送FIN给Client，Client接收到FIN说明服务端还没收到最后一个ACK。
+
+图解TCP建立与关闭连接：http://blog.csdn.net/whuslei/article/details/6667471/
